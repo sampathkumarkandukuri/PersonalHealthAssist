@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.11.12306.390 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarohi.Api", "api\Aarohi.Api.csproj", "{696D7EF1-019F-4EC5-A649-3AA93E3E5647}"
 EndProject
@@ -30,24 +30,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database scripts", "Databas
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React frontend", "React frontend", "{856DBE4E-62DA-4027-BD76-3D0A00D69632}"
 	ProjectSection(SolutionItems) = preProject
-		web\package.json = web\package.json
-		web\package-lock.json = web\package-lock.json
-		web\vite.config.js = web\vite.config.js
 		web\index.html = web\index.html
-		web\src\main.jsx = web\src\main.jsx
 		web\src\lib.js = web\src\lib.js
+		web\src\main.jsx = web\src\main.jsx
+		web\package-lock.json = web\package-lock.json
+		web\package.json = web\package.json
 		web\src\style.css = web\src\style.css
+		web\vite.config.js = web\vite.config.js
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup and tests", "Setup and tests", "{B8EF14FC-04AB-4CE3-8190-3A89D87CA246}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-		scripts\Initialize.ps1 = scripts\Initialize.ps1
-		scripts\Start.ps1 = scripts\Start.ps1
-		scripts\Publish.ps1 = scripts\Publish.ps1
 		tests\calculations.test.mjs = tests\calculations.test.mjs
+		scripts\Initialize.ps1 = scripts\Initialize.ps1
 		tests\integration.mjs = tests\integration.mjs
 		NuGet.Config = NuGet.Config
+		scripts\Publish.ps1 = scripts\Publish.ps1
+		README.md = README.md
+		scripts\Start.ps1 = scripts\Start.ps1
 	EndProjectSection
 EndProject
 Global
@@ -60,5 +60,8 @@ Global
 		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

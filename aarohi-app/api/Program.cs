@@ -5,8 +5,56 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Threading.RateLimiting;
 using Microsoft.Data.SqlClient;
+using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+
+static bool IsPortTaken(int port)
+{
+    try
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, port);
+        listener.Start();
+        return false;
+    }
+    catch (SocketException)
+    {
+        return true;
+    }
+}
+
+static string ResolveApiUrl(string? configuredUrl)
+{
+    var preferredUrl = configuredUrl ?? Environment.GetEnvironmentVariable("AAROHI_BASE_URL") ?? "http://127.0.0.1:5088";
+    if (!Uri.TryCreate(preferredUrl, UriKind.Absolute, out var uri) || uri.Port == 0)
+    {
+        return preferredUrl;
+    }
+
+    var startPort = uri.Port;
+    var candidatePort = startPort;
+    while (IsPortTaken(candidatePort))
+    {
+        candidatePort++;
+        if (candidatePort > ushort.MaxValue)
+        {
+            throw new InvalidOperationException($"No free port was found starting from {startPort}.");
+        }
+    }
+
+    if (candidatePort != startPort)
+    {
+        var next = new UriBuilder(uri) { Port = candidatePort };
+        Console.WriteLine($"Port {startPort} is already in use; using {next.Uri} instead.");
+        return next.Uri.ToString();
+    }
+
+    return preferredUrl;
+}
+
 var builder = WebApplication.CreateBuilder(args);
+var configuredUrl = Environment.GetEnvironmentVariable("ASPNETCORE_URLS") ?? Environment.GetEnvironmentVariable("AAROHI_BASE_URL") ?? "http://127.0.0.1:5088";
+builder.WebHost.UseUrls(ResolveApiUrl(configuredUrl));
 builder.Services.AddSingleton<Db>(); builder.Services.AddSingleton<TokenService>();
 var tokenService = new TokenService(builder.Configuration, builder.Environment); builder.Services.AddSingleton(tokenService);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(o => { o.MapInboundClaims = false; o.TokenValidationParameters = new() { ValidateIssuer = true, ValidIssuer = "aarohi-api", ValidateAudience = true, ValidAudience = "aarohi-web", ValidateLifetime = true, ValidateIssuerSigningKey = true, IssuerSigningKey = tokenService.Key, ValidAlgorithms = [SecurityAlgorithms.RsaSha256], ClockSkew = TimeSpan.FromSeconds(30) }; o.Events = new() { OnTokenValidated = async context => { var db = context.HttpContext.RequestServices.GetRequiredService<Db>(); var user = context.Principal!; await using var c = await db.Open(Db.Household(user)); var count = await Db.Scalar(c, "SELECT COUNT(*) FROM auth.Session s JOIN auth.UserAccount u ON u.Id=s.UserId JOIN family.Membership m ON m.UserId=u.Id JOIN auth.Role r ON r.Id=m.RoleId JOIN family.Household h ON h.Id=m.HouseholdId WHERE s.Id=@s AND u.Id=@u AND m.HouseholdId=@h AND u.Status='Active' AND m.Status='Active' AND r.IsActive=1 AND h.Status='Active' AND s.RevokedAt IS NULL AND s.ExpiresAt>SYSUTCDATETIME()", new() { ["s"] = long.Parse(user.FindFirstValue("sid")!), ["u"] = Db.User(user), ["h"] = Db.Household(user) }); if (count != 1) context.Fail("Session is no longer valid."); } }; });
