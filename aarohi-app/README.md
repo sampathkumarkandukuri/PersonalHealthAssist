@@ -87,7 +87,7 @@ Apply database migrations using a separate deployment identity. **Do not expose 
 An Azure deployment can use your own hostname and does not require ChatGPT hosting or links. Hosting selection and deployment must be completed in your Azure subscription.
 
 ### Retailer product search
-Enter a product on Shop & orders, then choose Search Blinkit, Search Zepto or Search BigBasket to pass the query to that retailer. Other providers use a clearly labelled Google site search. Medicine searches require manually entered terms and never include stored prescriptions or profiles automatically. Results remain external; no live price/stock retrieval or checkout is implemented. External search routes may change and may require location or sign-in; their end-to-end retailer behavior was not verified. Eight calculation/search tests and the React production build passed for this update.
+When the Shop & orders page opens, it automatically refreshes the latest available online price signal for the first product and keeps the retailer links below for manual verification. If a provider is unavailable or blocks automated lookup, the app falls back to the seeded demo offers without failing the page. Search buttons still open external retailer or Google results; live checkout, cart transfer and stock confirmation remain outside the app. External search routes may change and may require location or sign-in; their end-to-end retailer behavior was not verified.
 
 ### Reset a forgotten local password
 From the aarohi-app directory, run in an interactive PowerShell or Command Prompt:

@@ -10,20 +10,22 @@ export function parseExpenses(text,date=today()){const categories=[[/grocer|milk
 export function retirementProjection(plan,people,summary){const person=people.find(p=>p.ScenarioId===plan.Id&&p.IsRetirementPerson);if(!person)return {error:'Select a retirement person in Family & goals.'};const asOf=new Date(plan.AsOfDate),birth=new Date(person.DateOfBirth);const age=(asOf-birth)/(365.25*86400000),months=Math.max(0,Math.ceil((person.RetirementAge-age)*12)),retirementMonths=(plan.EndAge-person.RetirementAge)*12;if(months<=0||retirementMonths<=0)return {error:'Retirement age must be after current age and before the plan end age.'};const before=Math.pow(1+plan.BeforeReturnPercent/100,1/12)-1,after=Math.pow(1+plan.AfterReturnPercent/100,1/12)-1,inflation=Math.pow(1+plan.InflationPercent/100,1/12)-1;const spending=(summary.Essential+summary.Lifestyle)*plan.RetireSpendPercent/100*Math.pow(1+inflation,months);let corpus=0;for(let m=0;m<retirementMonths;m++)corpus+=Math.max(0,spending*Math.pow(1+inflation,m)-plan.MonthlyPension)/Math.pow(1+after,m);const factor=Math.abs(before)<1e-10?months:(Math.pow(1+before,months)-1)/before;const projected=plan.RetireSaved*Math.pow(1+before,months)+plan.RetireContribution*factor;let balance=projected,unfunded=0,rows=[];for(let m=0;m<retirementMonths;m++){const opening=balance,expense=Math.max(0,spending*Math.pow(1+inflation,m)-plan.MonthlyPension),shortfall=Math.max(0,expense-balance);unfunded+=shortfall;balance=Math.max(0,balance-expense)*(1+after);if(m%12===0)rows.push({age:person.RetirementAge+m/12,opening,expense,closing:balance})}return {spending,corpus,projected,sip:monthlySaving(corpus,plan.RetireSaved,plan.BeforeReturnPercent,months),unfunded,rows}}
 
 // External search navigation only: this does not retrieve prices or stock.
-export function providerSearch(provider,term){
- const query=term.trim();
- let site;try{site=new URL(provider.WebsiteUrl)}catch{return null}
- if(site.protocol!=='https:')return null;
- if(!query)return {url:site.href,kind:'website'};
- const host=site.hostname.replace(/^www\./,'');
- const routes={
-  'blinkit.com':['https://blinkit.com/s/','q'],
-  'bigbasket.com':['https://www.bigbasket.com/ps/','q'],
-  'zeptonow.com':['https://www.zepto.com/search','query'],
-  'zepto.com':['https://www.zepto.com/search','query']
- };
- const route=routes[host];
- const url=new URL(route?route[0]:'https://www.google.com/search');
- url.searchParams.set(route?route[1]:'q',route?query:'site:'+host+' '+query);
- return {url:url.href,kind:route?'retailer':'web'};
+export function providerSearch(provider,term,area=''){
+  const query=term.trim();
+  let site;try{site=new URL(provider.WebsiteUrl)}catch{return null}
+  if(site.protocol!=='https:')return null;
+  const locale=area.trim();
+  const localQuery=locale ? `${query} in ${locale}` : query;
+  if(!query)return {url:site.href,kind:'website'};
+  const host=site.hostname.replace(/^www\./,'');
+  const routes={
+   'blinkit.com':['https://blinkit.com/search','q'],
+   'bigbasket.com':['https://www.bigbasket.com/ps/','q'],
+   'zeptonow.com':['https://www.zepto.com/search','query'],
+   'zepto.com':['https://www.zepto.com/search','query']
+  };
+  const route=routes[host];
+  const url=new URL(route?route[0]:'https://www.google.com/search');
+  url.searchParams.set(route?route[1]:'q',route?localQuery:'site:'+host+' '+localQuery);
+  return {url:url.href,kind:route?'retailer':'web'};
 }
