@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "file": "assets/food/ragi-dosa.jpg",
+    "sha256": "19af4488941a4ae81819f77075fee06f02535c8590143b0fe038714cbfcab10e"
+  },
+  {
+    "id": 2,
+    "file": "assets/food/vegetable-saaru-rice.jpg",
+    "sha256": "492d9bda9cb383cc61fe573499a80d4cd07487f0a037e1914abce67227bdaf23"
+  },
+  {
+    "id": 3,
+    "file": "assets/food/akki-rotti.jpg",
+    "sha256": "7faffa87be238d6a203d7f5fa73cfc196a491cc30cab499b0bd23ee816fbff90"
+  },
+  {
+    "id": 4,
+    "file": "assets/food/pesarattu.jpg",
+    "sha256": "608c1854b965dff4319551084ccc197bb86d6b22145b930b4d8ba73df75c96e9"
+  },
+  {
+    "id": 5,
+    "file": "assets/food/pappu-rice.jpg",
+    "sha256": "6388b49fe8d998837f712bcc5cd1a67b4b0cb772672b8457c649a67009c097e9"
+  },
+  {
+    "id": 6,
+    "file": "assets/food/jonna-rotte.jpg",
+    "sha256": "c7bde8ff3136e7c4caea997191bdbbdde9c665cd181d37a462d28558a5b041fd"
+  },
+  {
+    "id": 7,
+    "file": "assets/food/idli.jpg",
+    "sha256": "22a37af81a431143500148a25e1786901490ecdf25ae4bb09da07e13b432271c"
+  },
+  {
+    "id": 8,
+    "file": "assets/food/vegetable-sambar-rice.jpg",
+    "sha256": "911a9deb50e5a960736982e6fdec4d47dfab9d3fd1b6abfd6cde4b24cea59007"
+  },
+  {
+    "id": 9,
+    "file": "assets/food/vegetable-dosa.jpg",
+    "sha256": "2e0e32e9e90d97bede8f15b679785b1544d4b238f40bb7aea343187cc00f9be9"
+  },
+  {
+    "id": 10,
+    "file": "assets/food/appam.jpg",
+    "sha256": "ba8ec90b60fda3827119d29a710cd85cbf454b8510452b329bdc844cf4fcad95"
+  },
+  {
+    "id": 11,
+    "file": "assets/food/vegetable-avial-rice.jpg",
+    "sha256": "0abd4a014485d3f82260a7e81c85756dce0bca8f51c5a8f4d1eff200c4c90a1e"
+  },
+  {
+    "id": 12,
+    "file": "assets/food/puttu-kadala.jpg",
+    "sha256": "a3bdd6242727b0c14b8ead14d0359d812ab1198505c42aebe367a0483c30cd3f"
+  },
+  {
+    "id": 13,
+    "file": "assets/food/vegetable-paratha.jpg",
+    "sha256": "8e74a656b7074f0d417336912c0979152b0af264c2af2b97cef1a6ee2555c0d9"
+  },
+  {
+    "id": 14,
+    "file": "assets/food/chole-roti.jpg",
+    "sha256": "cae52dd955afa20fc9d68125735da3e227428ce79b8034790c51b123aec4fa7c"
+  },
+  {
+    "id": 15,
+    "file": "assets/food/dal-rice.jpg",
+    "sha256": "9d0d6469cfeef936f04585c1e0a370056179d799dce8074c9e5e304c1e0699af"
+  },
+  {
+    "id": 16,
+    "file": "assets/food/dhokla.jpg",
+    "sha256": "a985bcf9855bc5428830d1e593f35323cb45626c8d8f6dda03d33c5daaad97a8"
+  },
+  {
+    "id": 17,
+    "file": "assets/food/vegetable-thepla.jpg",
+    "sha256": "4ff66639fa9a1504f7579c769de965cf88f38be80b8a8f571c799e21aa9305e7"
+  },
+  {
+    "id": 18,
+    "file": "assets/food/vegetable-poha.jpg",
+    "sha256": "c2c36f9fad4b68451517635f47f96e7664354e1352af8799bc7b29a06b5d90a7"
+  },
+  {
+    "id": 19,
+    "file": "assets/food/varan-bhaat.jpg",
+    "sha256": "f9d1dbfc65fdefbfd345ee759d04307f80c5e8a147436469447e5a8318f10af6"
+  },
+  {
+    "id": 20,
+    "file": "assets/food/jowar-bhakri.jpg",
+    "sha256": "168c6bb172ec1e92f69406786c29045a9acc0c4efc814cf3d6068a119ab3a0d4"
+  },
+  {
+    "id": 21,
+    "file": "assets/food/tomato-pappu.jpg",
+    "sha256": "16a22d896a807af7f53ce2ae0da1479a2bc4ed227c05b08d320ff88b9305cbe3"
+  },
+  {
+    "id": 22,
+    "file": "assets/food/vegetable-upma.jpg",
+    "sha256": "9e9a43ba3f92fa2b49f82314dcb3f64c87adb876ab7260221c5bf4b7df2c4f3b"
+  },
+  {
+    "id": 23,
+    "file": "assets/food/vegetable-chire.jpg",
+    "sha256": "5b0fa65ec7febc4685d2f20f749562997801358aa2409b85d8bcf1e0bd008a91"
+  },
+  {
+    "id": 24,
+    "file": "assets/food/vegetable-khichuri.jpg",
+    "sha256": "76d604a6262064d8d1d6615c673443934fd4d3392cc9dd3579a5152408576507"
+  },
+  {
+    "id": 25,
+    "file": "assets/food/roti-vegetables.jpg",
+    "sha256": "845c0d555f5964ab1bb422e0918b3867e0190149402379aae9a7710516bfdeff"
+  },
+  {
+    "id": 26,
+    "file": "assets/food/besan-chilla.jpg",
+    "sha256": "ab3929a156021629275b9fde2c9ae190b29321b88c4b86a8707864b5df401bc0"
+  },
+  {
+    "id": 27,
+    "file": "assets/food/dal-roti.jpg",
+    "sha256": "ab5dd90d2c42c412c0f5db94aeebb310ed51d7a620bc8edf1736d8b253d849ee"
+  },
+  {
+    "id": 28,
+    "file": "assets/food/bajra-roti.jpg",
+    "sha256": "50272e02a96d7f5e2d82b5c3645efd1d5cfd0d7407adff6e2ec86bf9cb327268"
+  }
+]

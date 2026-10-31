@@ -1,0 +1,64 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aarohi.Api", "api\Aarohi.Api.csproj", "{696D7EF1-019F-4EC5-A649-3AA93E3E5647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database scripts", "Database scripts", "{529B8B24-2216-45E7-AD59-F723B2FAA916}"
+	ProjectSection(SolutionItems) = preProject
+		database\001_schema.sql = database\001_schema.sql
+		database\002_reference_data.sql = database\002_reference_data.sql
+		database\003_demo_data.sql = database\003_demo_data.sql
+		database\004_views_security.sql = database\004_views_security.sql
+		database\005_integrity.sql = database\005_integrity.sql
+		database\006_tests.sql = database\006_tests.sql
+		database\007_example_queries.sql = database\007_example_queries.sql
+		database\008_latest_design_schema.sql = database\008_latest_design_schema.sql
+		database\009_latest_design_reference.sql = database\009_latest_design_reference.sql
+		database\010_latest_design_demo.sql = database\010_latest_design_demo.sql
+		database\011_latest_design_views.sql = database\011_latest_design_views.sql
+		database\012_latest_design_tests.sql = database\012_latest_design_tests.sql
+		database\013_latest_example_queries.sql = database\013_latest_example_queries.sql
+		database\014_application.sql = database\014_application.sql
+		database\015_invitations.sql = database\015_invitations.sql
+		database\Install.ps1 = database\Install.ps1
+		database\LATEST-DESIGN.md = database\LATEST-DESIGN.md
+		database\MODEL.md = database\MODEL.md
+		database\README.md = database\README.md
+		database\SCHEMA_REFERENCE.md = database\SCHEMA_REFERENCE.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "React frontend", "React frontend", "{856DBE4E-62DA-4027-BD76-3D0A00D69632}"
+	ProjectSection(SolutionItems) = preProject
+		web\package.json = web\package.json
+		web\package-lock.json = web\package-lock.json
+		web\vite.config.js = web\vite.config.js
+		web\index.html = web\index.html
+		web\src\main.jsx = web\src\main.jsx
+		web\src\lib.js = web\src\lib.js
+		web\src\style.css = web\src\style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup and tests", "Setup and tests", "{B8EF14FC-04AB-4CE3-8190-3A89D87CA246}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		scripts\Initialize.ps1 = scripts\Initialize.ps1
+		scripts\Start.ps1 = scripts\Start.ps1
+		scripts\Publish.ps1 = scripts\Publish.ps1
+		tests\calculations.test.mjs = tests\calculations.test.mjs
+		tests\integration.mjs = tests\integration.mjs
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{696D7EF1-019F-4EC5-A649-3AA93E3E5647}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,366 @@
+[
+  {
+    "table": "cfg.Country",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Region",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Cuisine",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Language",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.OptionGroup",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Option",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Unit",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.MediaAsset",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Theme",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Setting",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Feature",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.Permission",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.Role",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.RolePermission",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Menu",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.Translation",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.Provider",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.TokenPolicy",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.UserAccount",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.ExternalIdentity",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.AuthChallenge",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.Session",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.RefreshToken",
+    "householdScoped": false
+  },
+  {
+    "table": "auth.RevokedAccessToken",
+    "householdScoped": false
+  },
+  {
+    "table": "family.Household",
+    "householdScoped": false
+  },
+  {
+    "table": "family.Membership",
+    "householdScoped": true
+  },
+  {
+    "table": "family.Member",
+    "householdScoped": true
+  },
+  {
+    "table": "family.MemberCuisine",
+    "householdScoped": true
+  },
+  {
+    "table": "family.MemberAccess",
+    "householdScoped": true
+  },
+  {
+    "table": "family.Consent",
+    "householdScoped": true
+  },
+  {
+    "table": "family.Setting",
+    "householdScoped": true
+  },
+  {
+    "table": "health.Document",
+    "householdScoped": true
+  },
+  {
+    "table": "health.DocumentExtraction",
+    "householdScoped": true
+  },
+  {
+    "table": "health.Condition",
+    "householdScoped": true
+  },
+  {
+    "table": "food.Allergen",
+    "householdScoped": false
+  },
+  {
+    "table": "health.Allergy",
+    "householdScoped": true
+  },
+  {
+    "table": "health.DietInstruction",
+    "householdScoped": true
+  },
+  {
+    "table": "health.Prescription",
+    "householdScoped": true
+  },
+  {
+    "table": "health.PrescriptionItem",
+    "householdScoped": true
+  },
+  {
+    "table": "health.Observation",
+    "householdScoped": true
+  },
+  {
+    "table": "food.Ingredient",
+    "householdScoped": false
+  },
+  {
+    "table": "food.IngredientAllergen",
+    "householdScoped": false
+  },
+  {
+    "table": "food.Recipe",
+    "householdScoped": false
+  },
+  {
+    "table": "food.RecipeCuisine",
+    "householdScoped": false
+  },
+  {
+    "table": "food.RecipeIngredient",
+    "householdScoped": false
+  },
+  {
+    "table": "food.MealPlan",
+    "householdScoped": true
+  },
+  {
+    "table": "pantry.StockLot",
+    "householdScoped": true
+  },
+  {
+    "table": "pantry.Movement",
+    "householdScoped": true
+  },
+  {
+    "table": "pantry.AlertRule",
+    "householdScoped": true
+  },
+  {
+    "table": "notify.Channel",
+    "householdScoped": false
+  },
+  {
+    "table": "notify.Template",
+    "householdScoped": false
+  },
+  {
+    "table": "notify.Preference",
+    "householdScoped": true
+  },
+  {
+    "table": "notify.Reminder",
+    "householdScoped": true
+  },
+  {
+    "table": "notify.ReminderTime",
+    "householdScoped": true
+  },
+  {
+    "table": "notify.Occurrence",
+    "householdScoped": true
+  },
+  {
+    "table": "notify.Outbox",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.Provider",
+    "householdScoped": false
+  },
+  {
+    "table": "commerce.ShoppingList",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.ShoppingItem",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.Quote",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.QuoteItem",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.OrderRecord",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.Category",
+    "householdScoped": false
+  },
+  {
+    "table": "finance.Account",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.IncomePlan",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.Budget",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.TransactionRecord",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.Liability",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.Repayment",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.Asset",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.AssetValuation",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.ChitPlan",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.ChitContribution",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.SavingsGoal",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.GoalContribution",
+    "householdScoped": true
+  },
+  {
+    "table": "audit.Event",
+    "householdScoped": true
+  },
+  {
+    "table": "cfg.LanguagePresentation",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.TextResource",
+    "householdScoped": false
+  },
+  {
+    "table": "cfg.RouteAlias",
+    "householdScoped": false
+  },
+  {
+    "table": "food.IngredientPresentation",
+    "householdScoped": false
+  },
+  {
+    "table": "commerce.DemoProduct",
+    "householdScoped": false
+  },
+  {
+    "table": "commerce.DemoOffer",
+    "householdScoped": false
+  },
+  {
+    "table": "family.InterfacePreference",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanScenario",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanPerson",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanAsset",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanDebt",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanFlow",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanPolicy",
+    "householdScoped": true
+  },
+  {
+    "table": "finance.PlanGoal",
+    "householdScoped": true
+  },
+  {
+    "table": "commerce.QuoteVerification",
+    "householdScoped": true
+  }
+]

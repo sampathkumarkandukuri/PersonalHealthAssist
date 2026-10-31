@@ -1,0 +1,8 @@
+PASS registration: two independent households
+PASS all resource queries and form metadata
+PASS cross-household references blocked and stale updates rejected
+PASS persistent pantry, idempotency and nonnegative stock
+PASS linked refunds, over-refund rejection and savings excluded from spending
+PASS one-time invitation, viewer restrictions, private document upload and quarantine
+PASS language persistence, last-admin protection and JWT revocation
+ALL HTTP INTEGRATION TESTS PASSED

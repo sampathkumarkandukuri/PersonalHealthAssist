@@ -1,0 +1,310 @@
+{
+  "regionIds": {
+    "Andhra Pradesh": 1,
+    "Arunachal Pradesh": 2,
+    "Assam": 3,
+    "Bihar": 4,
+    "Chhattisgarh": 5,
+    "Goa": 6,
+    "Gujarat": 7,
+    "Haryana": 8,
+    "Himachal Pradesh": 9,
+    "Jharkhand": 10,
+    "Karnataka": 11,
+    "Kerala": 12,
+    "Madhya Pradesh": 13,
+    "Maharashtra": 14,
+    "Manipur": 15,
+    "Meghalaya": 16,
+    "Mizoram": 17,
+    "Nagaland": 18,
+    "Odisha": 19,
+    "Punjab": 20,
+    "Rajasthan": 21,
+    "Sikkim": 22,
+    "Tamil Nadu": 23,
+    "Telangana": 24,
+    "Tripura": 25,
+    "Uttar Pradesh": 26,
+    "Uttarakhand": 27,
+    "West Bengal": 28,
+    "Andaman and Nicobar Islands": 29,
+    "Chandigarh": 30,
+    "Dadra and Nagar Haveli and Daman and Diu": 31,
+    "Delhi": 32,
+    "Jammu and Kashmir": 33,
+    "Ladakh": 34,
+    "Lakshadweep": 35,
+    "Puducherry": 36
+  },
+  "cuisineIds": {
+    "Andhra Pradesh": [
+      1,
+      2,
+      3
+    ],
+    "Arunachal Pradesh": [
+      4,
+      5
+    ],
+    "Assam": [
+      6,
+      7,
+      8
+    ],
+    "Bihar": [
+      9,
+      10,
+      11
+    ],
+    "Chhattisgarh": [
+      12
+    ],
+    "Goa": [
+      13,
+      14
+    ],
+    "Gujarat": [
+      15,
+      16,
+      17
+    ],
+    "Haryana": [
+      18
+    ],
+    "Himachal Pradesh": [
+      19,
+      20
+    ],
+    "Jharkhand": [
+      21
+    ],
+    "Karnataka": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "Kerala": [
+      26,
+      27,
+      28
+    ],
+    "Madhya Pradesh": [
+      29,
+      30,
+      31
+    ],
+    "Maharashtra": [
+      32,
+      33,
+      34,
+      35
+    ],
+    "Manipur": [
+      36
+    ],
+    "Meghalaya": [
+      37,
+      38,
+      39
+    ],
+    "Mizoram": [
+      40
+    ],
+    "Nagaland": [
+      41,
+      42
+    ],
+    "Odisha": [
+      43
+    ],
+    "Punjab": [
+      44
+    ],
+    "Rajasthan": [
+      45,
+      46,
+      47
+    ],
+    "Sikkim": [
+      48,
+      49
+    ],
+    "Tamil Nadu": [
+      50,
+      51,
+      52
+    ],
+    "Telangana": [
+      53,
+      54,
+      55
+    ],
+    "Tripura": [
+      56,
+      57
+    ],
+    "Uttar Pradesh": [
+      58,
+      59,
+      60
+    ],
+    "Uttarakhand": [
+      61,
+      62
+    ],
+    "West Bengal": [
+      63
+    ],
+    "Andaman and Nicobar Islands": [
+      64,
+      65
+    ],
+    "Chandigarh": [
+      66,
+      67
+    ],
+    "Dadra and Nagar Haveli and Daman and Diu": [
+      68,
+      69
+    ],
+    "Delhi": [
+      70,
+      71,
+      72
+    ],
+    "Jammu and Kashmir": [
+      73,
+      74
+    ],
+    "Ladakh": [
+      75
+    ],
+    "Lakshadweep": [
+      76
+    ],
+    "Puducherry": [
+      77,
+      78,
+      79
+    ]
+  },
+  "options": {
+    "Diet:Vegetarian": 1,
+    "Diet:Vegan": 2,
+    "Diet:Non-vegetarian": 3,
+    "Diet:Eggetarian": 4,
+    "DocumentCategory:Lab report": 5,
+    "DocumentCategory:Prescription": 6,
+    "DocumentCategory:Dietitian instructions": 7,
+    "DocumentCategory:Discharge summary": 8,
+    "DocumentCategory:Other": 9,
+    "Condition:Diabetes": 10,
+    "Condition:Hypertension": 11,
+    "Condition:None recorded": 12,
+    "Severity:Mild": 13,
+    "Severity:Moderate": 14,
+    "Severity:Severe": 15,
+    "Severity:Unknown": 16,
+    "MedicineForm:Tablet": 17,
+    "MedicineForm:Capsule": 18,
+    "MedicineForm:Syrup": 19,
+    "MedicineForm:Drops": 20,
+    "MedicineForm:Cream": 21,
+    "MedicineForm:Injection": 22,
+    "MedicineForm:Other": 23,
+    "Metric:Water": 24,
+    "Metric:Sleep": 25,
+    "Metric:Steps": 26,
+    "Metric:Weight": 27,
+    "Metric:Blood pressure": 28,
+    "Metric:Notes": 29,
+    "MealType:Breakfast": 30,
+    "MealType:Lunch": 31,
+    "MealType:Dinner": 32,
+    "MealType:Snack": 33,
+    "StockReason:Opening": 34,
+    "StockReason:Purchase": 35,
+    "StockReason:Consumption": 36,
+    "StockReason:Waste": 37,
+    "StockReason:Adjustment": 38,
+    "ReminderKind:Medicine": 39,
+    "ReminderKind:Meal": 40,
+    "ReminderKind:Grocery": 41,
+    "ReminderKind:EMI": 42,
+    "ReminderKind:Daily check-in": 43,
+    "AccountType:Bank": 44,
+    "AccountType:Cash": 45,
+    "AccountType:Wallet": 46
+  },
+  "ingredients": {
+    "ragi": 1,
+    "lentils": 2,
+    "rice": 3,
+    "onion": 4,
+    "jowar": 5,
+    "batter": 6,
+    "carrot": 7,
+    "coconut": 8,
+    "chickpeas": 9,
+    "atta": 10,
+    "besan": 11,
+    "yogurt": 12,
+    "spinach": 13,
+    "poha": 14,
+    "tomato": 15,
+    "rava": 16,
+    "bajra": 17,
+    "milk": 18
+  },
+  "recipes": {
+    "Pesarattu": 1,
+    "Tomato pappu": 2,
+    "Vegetable upma": 3,
+    "Local breakfast idea": 4,
+    "Seasonal dal & rice": 5,
+    "Regional vegetable roti": 6,
+    "Dhokla": 7,
+    "Dal & rice": 8,
+    "Vegetable thepla": 9,
+    "Ragi dosa": 10,
+    "Vegetable saaru & rice": 11,
+    "Akki rotti": 12,
+    "Appam": 13,
+    "Vegetable avial & rice": 14,
+    "Puttu & kadala": 15,
+    "Vegetable poha": 16,
+    "Varan bhaat": 17,
+    "Jowar bhakri": 18,
+    "Vegetable paratha": 19,
+    "Chole & roti": 20,
+    "Besan chilla": 21,
+    "Dal & roti": 22,
+    "Bajra roti": 23,
+    "Idli": 24,
+    "Vegetable sambar rice": 25,
+    "Vegetable dosa": 26,
+    "Pappu & rice": 27,
+    "Jonna rotte": 28,
+    "Vegetable chire": 29,
+    "Vegetable khichuri": 30,
+    "Roti & vegetables": 31
+  },
+  "cats": {
+    "salary": 1,
+    "passive": 2,
+    "groceries": 3,
+    "utilities": 4,
+    "health": 5,
+    "education": 6,
+    "saving": 7,
+    "mutual-fund": 8,
+    "stocks": 9,
+    "deposit": 10,
+    "property": 11,
+    "home-loan": 12,
+    "credit-card": 13,
+    "chit-obligation": 14
+  }
+}

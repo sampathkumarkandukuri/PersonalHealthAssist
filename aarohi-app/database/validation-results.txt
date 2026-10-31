@@ -1,0 +1,33 @@
+Applying 001_schema.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+001 already applied
+Applying 002_reference_data.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+002 already applied
+Applying 003_demo_data.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+003 already applied
+Applying 004_views_security.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+Applying 005_integrity.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+Applying 006_tests.sql to (localdb)\AarohiSchemaTest / AarohiFinalValidation
+PASS: reference coverage, photo links, tenant read isolation, disabled integrations and computed totals.
+PASS: RLS blocks foreign-household writes
+PASS: Composite foreign key blocks cross-household member references
+PASS: Prescription cannot use another member document
+PASS: Quote item cannot reference a different shopping list
+PASS: Negative budget rejected
+PASS: Invalid configuration JSON rejected
+PASS: Wrong dropdown option group rejected
+PASS: Cyclic submenu rejected
+PASS: Over-consumption cannot make stock negative
+PASS: Lot unit cannot change under existing movements
+PASS: Medicine reminder requires prescription item
+PASS: Medicine order cannot use grocery retailer
+PASS: Empty weekday schedule rejected
+PASS: Completion requires actual completion timestamp
+PASS: OTP attempt limit enforced
+PASS: Duplicate refresh-token hash rejected
+PASS: Duplicate notification delivery key rejected
+PASS: application cannot read authentication secrets or rewrite audit history; public configuration remains readable.
+ALL AAROHI DATABASE TESTS PASSED
+Completed. No API, authentication provider, scheduler or retailer connection was enabled.
+
+Additional validation: clean reference-only deployment passed; later opt-in demo seeding under active RLS passed; all database tests passed again.
+Packaged media checksums: 28 passed.

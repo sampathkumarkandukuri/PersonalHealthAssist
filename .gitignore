@@ -1,0 +1,5 @@
+# This workspace contains unrelated projects. Publish only Aarohi.
+/*
+!/.gitignore
+!/README.md
+!/aarohi-app/
