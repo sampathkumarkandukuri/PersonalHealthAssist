@@ -17,9 +17,11 @@ public record LoginRequest(string Email, string Password);
 public static class AuthEndpoints
 {
     static readonly PasswordHasher<string> Hasher = new();
+    const string DevelopmentAdminUsername = "admin";
     const string DevelopmentAdminEmail = "admin@aarohi.local";
+    const string DevelopmentAdminDefaultPassword = "adminpassword2026";
 
-    static string DevelopmentAdminPassword => Environment.GetEnvironmentVariable("AAROHI_DEV_ADMIN_PASSWORD") ?? throw new ApiError(401, "Development admin password is not configured. Set AAROHI_DEV_ADMIN_PASSWORD before starting the app.");
+    static string DevelopmentAdminPassword => Environment.GetEnvironmentVariable("AAROHI_DEV_ADMIN_PASSWORD") ?? DevelopmentAdminDefaultPassword;
 
     static async Task<(long UserId, long HouseholdId)> EnsureDevelopmentAdminAsync(SqlConnection c)
     {
@@ -69,7 +71,9 @@ public static class AuthEndpoints
             if (r.Email.Length > 254 || r.Password.Length > 128) throw new ApiError(401, "Invalid credentials.");
 
             var enteredEmail = r.Email.Trim();
-            var useDevelopmentAdmin = app.Environment.IsDevelopment() && (string.Equals(enteredEmail, "admin", StringComparison.OrdinalIgnoreCase) || string.Equals(enteredEmail, DevelopmentAdminEmail, StringComparison.OrdinalIgnoreCase));
+            var useDevelopmentAdmin = app.Environment.IsDevelopment() &&
+                (string.Equals(enteredEmail, DevelopmentAdminUsername, StringComparison.OrdinalIgnoreCase) ||
+                 string.Equals(enteredEmail, DevelopmentAdminEmail, StringComparison.OrdinalIgnoreCase));
             var normalizedEmail = useDevelopmentAdmin ? DevelopmentAdminEmail : enteredEmail;
 
             await using var c = await db.Open();
