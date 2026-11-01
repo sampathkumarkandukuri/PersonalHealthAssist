@@ -29,7 +29,7 @@ sqllocaldb start AarohiSchemaTest
 ./scripts/Start.ps1
 ```
 
-Open http://127.0.0.1:5088 and register your own household. The database in this workspace is already initialized; do not recreate it. Demo seeds are fictional and do not install a login password. To use another SQL instance/database, pass Server and Database to Initialize.ps1 and set ConnectionStrings__Aarohi before starting.
+Open http://127.0.0.1:5088 and register your own household. The database in this workspace is already initialized; do not recreate it. For local testing, the app accepts a development admin login when running in Development mode: email `admin@aarohi.local` or `admin`, and the password comes from the `AAROHI_DEV_ADMIN_PASSWORD` environment variable. Set it to the local-only admin password before starting the app. This account is only intended for local validation and should not be used in production. To use another SQL instance/database, pass Server and Database to Initialize.ps1 and set ConnectionStrings__Aarohi before starting.
 
 The development signing key is regenerated when the API restarts. Sessions are held in browser memory, so refreshing requires signing in again. Local email/password login does not verify email ownership.
 
